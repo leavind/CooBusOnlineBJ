@@ -1,0 +1,686 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RaywindStudioDLL</name>
+    </assembly>
+    <members>
+        <member name="T:RaywindStudio.Components.MergeGridView">
+            <summary>
+            可以合并ColumnHeader及Cell的dataGridView
+            </summary>
+        </member>
+        <member name="M:RaywindStudio.Components.MergeGridView.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:RaywindStudio.Components.MergeGridView.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            
+            </summary>
+            <param name="container"></param>
+        </member>
+        <member name="M:RaywindStudio.Components.MergeGridView.PaintUnitHeader(System.Windows.Forms.TreeNode,System.Windows.Forms.DataGridViewCellPaintingEventArgs,System.Int32)">
+            <summary>  
+            绘制合并表头  
+            </summary>  
+            <param name="node">合并表头节点</param>  
+            <param name="e">绘图参数集</param>  
+            <param name="level">结点深度</param>  
+            <remarks></remarks>  
+        </member>
+        <member name="M:RaywindStudio.Components.MergeGridView.GetUnitHeaderWidth(System.Windows.Forms.TreeNode)">
+            <summary>  
+            获得合并标题字段的宽度  
+            </summary>  
+            <param name="node">字段节点</param>  
+            <returns>字段宽度</returns>  
+            <remarks></remarks>  
+        </member>
+        <member name="M:RaywindStudio.Components.MergeGridView.GetColumnListNodeIndex(System.Windows.Forms.TreeNode)">
+             <summary>  
+             获得底层字段索引  
+             </summary>  
+            ' <param name="node">底层字段节点</param>  
+             <returns>索引</returns>  
+             <remarks></remarks>  
+        </member>
+        <member name="M:RaywindStudio.Components.MergeGridView.GetNadirColumnNodes(System.Collections.ArrayList,System.Windows.Forms.TreeNode,System.Boolean)">
+            <summary>  
+            获得底层字段集合  
+            </summary>  
+            <param name="alList">底层字段集合</param>  
+            <param name="node">字段节点</param>  
+            <param name="isChecked">向上搜索与否</param>  
+            <remarks></remarks>  
+        </member>
+        <member name="M:RaywindStudio.Components.MergeGridView.OnScroll(System.Windows.Forms.ScrollEventArgs)">
+            <summary>  
+            滚动  
+            </summary>  
+            <param name="e"></param>  
+        </member>
+        <member name="M:RaywindStudio.Components.MergeGridView.OnColumnWidthChanged(System.Windows.Forms.DataGridViewColumnEventArgs)">
+            <summary>  
+            列宽度改变的重写  
+            </summary>  
+            <param name="e"></param>  
+        </member>
+        <member name="M:RaywindStudio.Components.MergeGridView.OnCellPainting(System.Windows.Forms.DataGridViewCellPaintingEventArgs)">
+            <summary>  
+            单元格绘制(重写)  
+            </summary>  
+            <param name="e"></param>  
+            <remarks></remarks>  
+        </member>
+        <member name="M:RaywindStudio.Components.MergeGridView.DrawCell(System.Windows.Forms.DataGridViewCellPaintingEventArgs)">
+            <summary>
+            画单元格
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:RaywindStudio.Components.MergeGridView.PaintingFont(System.Windows.Forms.DataGridViewCellPaintingEventArgs,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            画字符串
+            </summary>
+            <param name="e"></param>
+            <param name="cellwidth"></param>
+            <param name="UpRows"></param>
+            <param name="DownRows"></param>
+            <param name="count"></param>
+        </member>
+        <member name="F:RaywindStudio.Components.MergeGridView.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:RaywindStudio.Components.MergeGridView.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:RaywindStudio.Components.MergeGridView.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:RaywindStudio.Components.MergeGridView.CellHeight">
+            <summary>
+            dataGridViewCell.Height
+            </summary>
+        </member>
+        <member name="P:RaywindStudio.Components.MergeGridView.RefreshAtHscroll">
+            <summary>  
+            水平滚动时是否刷新表头，数据较多时可能会闪烁，不刷新时可能显示错误  
+            </summary>  
+        </member>
+        <member name="P:RaywindStudio.Components.MergeGridView.ColumnDeep">
+            <summary>
+            设置或获得合并表头树的深度
+            </summary>
+        </member>
+        <member name="P:RaywindStudio.Components.MergeGridView.ColumnTreeView">
+            <summary>
+            添加合并式单元格绘制的所需要的节点对象
+            </summary>
+        </member>
+        <member name="P:RaywindStudio.Components.MergeGridView.ColumnTreeViewNode">
+            <summary>
+            设置添加的字段树的相关属性
+            </summary>
+        </member>
+        <member name="P:RaywindStudio.Components.MergeGridView.MergeColumnNames">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:RaywindStudio.Components.MergeGridView.NadirColumnList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:RaywindStudio.DAL.DAL">
+            <summary>
+            常用数据库/表操作类
+            </summary>
+        </member>
+        <member name="F:RaywindStudio.DAL.DAL.debug">
+            <summary>
+            是否写调试信息；
+            执行成功写到C:\\DebugSQL.txt；
+            执行失败写到C:\\DebugTxt.txt；
+            </summary>
+        </member>
+        <member name="M:RaywindStudio.DAL.DAL.GetDataSet(System.String,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            从MSSQL数据库读表并返回一个DataSet
+            </summary>
+            <param name="Querystr">SQL查询字符串</param>
+            <param name="sqlconn">SQL连接字符串</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:RaywindStudio.DAL.DAL.GetDataTable(System.String,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            从MSSQL数据库读表并返回一个DataTable
+            </summary>
+            <param name="Querystr">SQL查询字符串</param>
+            <param name="sqlconn">SQL连接字符串</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:RaywindStudio.DAL.DAL.ExecuteScalar(System.String,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            执行一个SQL语句并返回结果集的第一列，第一行，忽略其他行列
+            </summary>
+            <param name="Querystr">SQL查询字符串</param>
+            <param name="sqlconn">SQL连接字符串</param>
+            <returns>object</returns>
+        </member>
+        <member name="M:RaywindStudio.DAL.DAL.ExecuteNonQuery(System.String,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            执行一个SQL语句并返回是否执行成功。
+            </summary>
+            <param name="Querystr">SQL查询字符串</param>
+            <param name="sqlconn">SQL连接字符串</param>
+            <returns>boolean</returns>
+        </member>
+        <member name="M:RaywindStudio.DAL.DAL.ExecuteReader(System.String,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            执行一个SQL语句并返回SqlDataReader：以流的方式读取表
+            </summary>
+            <param name="Querystr">SQL查询字符串</param>
+            <param name="sqlconn">SQL连接字符串</param>
+            <returns>SqlDataReader</returns>
+        </member>
+        <member name="M:RaywindStudio.DAL.DAL.DistInctTable(System.Data.DataRow[],System.String,System.Data.DataTable)">
+            <summary>
+            从DataRow集合中排除重复项，并返回一个DataTable
+            </summary>
+            <param name="drs">DataRow集合</param>
+            <param name="ColumnName">筛选的条件列名</param>
+            <param name="DataTableschemaClone">要将结果装入的空表的架构</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:RaywindStudio.DAL.DAL.DistInctTable(System.Data.DataTable,System.String)">
+            <summary>
+            从DataTable中排除重复行，并返回一个DataTable
+            </summary>
+            <param name="dt">源DataTable</param>
+            <param name="ColumnName">筛选的条件列名</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="T:RaywindStudio.DAL.DoExcel">
+            <summary>
+            Excel与DataSet的常用交互操作
+            </summary>
+        </member>
+        <member name="M:RaywindStudio.DAL.DoExcel.GetExtFileTypeName(System.String)">
+            <summary>
+            取文件的扩展名
+            </summary>
+            <param name="FileName">文件名称</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:RaywindStudio.DAL.DoExcel.IsExcel2007(System.String)">
+            <summary>
+            检查一个文件是不是2007版本的Excel文件
+            </summary>
+            <param name="FileName">文件名称</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:RaywindStudio.DAL.DoExcel.GetExcelConnectionString(System.String,System.Boolean)">
+            <summary>
+            Excel文件在服务器上的OLE连接字符串
+            </summary>
+            <param name="excelFile">Excel文件在服务器上的路径</param>
+            <param name="no_HDR">第一行不是标题：true;第一行是标题：false;</param>
+            <returns>String</returns>
+        </member>
+        <member name="M:RaywindStudio.DAL.DoExcel.GetExcelConnectionString(System.String)">
+            <summary>
+            Excel文件在服务器上的OLE连接字符串
+            </summary>
+            <param name="excelFile">Excel文件在服务器上的路径</param>
+            <returns>String</returns>
+        </member>
+        <member name="M:RaywindStudio.DAL.DoExcel.GetExcelConnectionStringByWrite(System.String)">
+            <summary>
+            Excel文件在服务器上的OLE连接字符串
+            </summary>
+            <param name="excelFile">Excel文件在服务器上的路径</param>
+            <returns>String</returns>
+        </member>
+        <member name="M:RaywindStudio.DAL.DoExcel.GetExcelSheetNames2DataTable(System.String)">
+            <summary>
+            根据Excel物理路径获取Excel文件中所有表名,列名是TABLE_NAME
+            </summary>
+            <param name="excelFile">Excel物理路径</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:RaywindStudio.DAL.DoExcel.GetExcelSheetNames(System.String)">
+            <summary>
+            根据Excel物理路径获取Excel文件中所有表名
+            </summary>
+            <param name="excelFile">Excel物理路径</param>
+            <returns>String[]</returns>
+        </member>
+        <member name="M:RaywindStudio.DAL.DoExcel.GetExcelSheetNames2List(System.String)">
+            <summary>
+            根据Excel物理路径获取Excel文件中所有表名
+            </summary>
+            <param name="excelFile">Excel物理路径</param>
+            <returns>String[]</returns>
+        </member>
+        <member name="M:RaywindStudio.DAL.DoExcel.GetExcelToDataTableBySheet(System.String,System.String,System.Boolean)">
+            <summary>
+            获取Excel文件中指定SheetName的内容到DataTable
+            </summary>
+            <param name="FileFullPath">Excel物理路径</param>
+            <param name="SheetName">SheetName</param>
+            <param name="no_HDR">第一行不是标题：true;第一行是标题：false;</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:RaywindStudio.DAL.DoExcel.GetExcelToDataTableBySheet(System.String,System.String)">
+            <summary>
+            获取Excel文件中指定SheetName的内容到DataTable
+            </summary>
+            <param name="FileFullPath">Excel物理路径</param>
+            <param name="SheetName">SheetName</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:RaywindStudio.DAL.DoExcel.GetExcelToDataSet(System.String,System.Boolean)">
+            <summary>
+            获取Excel文件中所有Sheet的内容到DataSet，以Sheet名做DataTable名
+            </summary>
+            <param name="FileFullPath">Excel物理路径</param>
+            <param name="no_HDR">第一行不是标题：true;第一行是标题：false;</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:RaywindStudio.DAL.DoExcel.GetExcelToDataSet(System.String,System.Boolean,System.String)">
+            <summary>
+            获取Excel文件中指定Sheet的内容到DataSet，以Sheet名做DataTable名
+            </summary>
+            <param name="FileFullPath">Excel物理路径</param>
+            <param name="no_HDR">第一行不是标题：true;第一行是标题：false;</param>
+            <param name="SheetName">第一行不是标题：true;第一行是标题：false;</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:RaywindStudio.DAL.DoExcel.DeleteOldFile(System.String)">
+            <summary>
+            删除过时文件
+            </summary>
+            <param name="servepath">excel文件地址</param>
+            <returns>boolean</returns>
+        </member>
+        <member name="M:RaywindStudio.DAL.DoExcel.CreateSheet(System.String,System.String,System.String[])">
+            <summary>
+            在一个Excel文件中创建Sheet
+            </summary>
+            <param name="servepath">Excel物理路径,如果文件不是一个已存在的文件，会自动创建文件</param>
+            <param name="sheetName">Sheet Name</param>
+            <param name="cols">表头列表</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:RaywindStudio.DAL.DoExcel.DataTable2Sheet(System.String,System.Data.DataTable)">
+            <summary>
+            把一个DataTable写入到一个或多个Sheet中
+            </summary>
+            <param name="servepath">Excel物理路径,如果文件不是一个已存在的文件，会自动创建文件</param>
+            <param name="dt">DataTable</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:RaywindStudio.DAL.DoExcel.DataTable2Sheet(System.String,System.Data.DataTable,System.Int32)">
+            <summary>       
+            把一个DataTable写入到一个或多个Sheet中
+            </summary>
+            <param name="servepath">Excel物理路径,如果文件不是一个已存在的文件，会自动创建文件</param>
+            <param name="dt">DataTable</param>
+            <param name="maxrow">一个Sheet的行数</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:RaywindStudio.DAL.DoExcel.DataTable2Sheet(System.String,System.Data.DataTable,System.String)">
+            <summary>
+            把一个DataTable写入到一个或多个Sheet中
+            </summary>
+            <param name="servepath">Excel物理路径,如果文件不是一个已存在的文件，会自动创建文件</param>
+            <param name="dt">DataTable</param>
+            <param name="sheetName">Sheet Name</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:RaywindStudio.DAL.DoExcel.DataTable2Sheet(System.String,System.Data.DataTable,System.String,System.Int32)">
+            <summary>
+            把一个DataTable写入到一个或多个Sheet中
+            </summary>
+            <param name="servepath">Excel物理路径,如果文件不是一个已存在的文件，会自动创建文件</param>
+            <param name="dt">DataTable</param>
+            <param name="sheetName">Sheet Name</param>
+            <param name="maxrow">一个Sheet的行数</param>
+            <returns>bool</returns>
+        </member>
+        <member name="T:RaywindStudio.DTime.Delay">
+            <summary>
+            延时
+            </summary>
+        </member>
+        <member name="M:RaywindStudio.DTime.Delay.delay(System.Double)">
+            <summary>
+            延时
+            </summary>
+            <param name="ms">延时的毫秒数</param>
+        </member>
+        <member name="T:RaywindStudio.DTime.WeekofYear">
+            <summary>
+            计算指定日期是一年的第几周
+            </summary>
+        </member>
+        <member name="M:RaywindStudio.DTime.WeekofYear.GetWeek(System.DateTime,System.DayOfWeek)">
+            <summary>
+            计算指定日期是一年的第几周
+            </summary>
+            <param name="dateTime">指定日期</param>
+            <param name="firstDayOfWeek">指定每周的第一天是周几</param>
+            <returns></returns>
+        </member>
+        <member name="T:RaywindStudio.Strings.Base64">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:RaywindStudio.Strings.Base64.GetEncodeText(System.String)">
+            
+            将一串字符串转换为其 Base64 编码形式, 并返回
+            
+            要转换的字符串
+            
+            
+        </member>
+        <member name="M:RaywindStudio.Strings.Base64.GetDecodeText(System.String)">
+            
+            将 Base 编码形式还原为原始字符串, 并返回
+            
+            Base 64 编码字符串
+            
+            
+        </member>
+        <member name="M:RaywindStudio.Strings.Base64.EncodeFile(System.String,System.String)">
+            
+            将文件进行 Base64 编码
+            
+            源文件,即要编码的文件的位置
+            目标文件, 编码后的文件要保存的位置, 如果目标文件已经存在, 将会被覆盖
+            
+        </member>
+        <member name="M:RaywindStudio.Strings.Base64.DecodeFile(System.String,System.String)">
+            
+            将文件进行 Base64 解码
+            
+            源文件,即要编码的文件的位置
+            目标文件, 编码后的文件要保存的位置, 如果目标文件已经存在, 将会被覆盖
+            
+        </member>
+        <member name="T:RaywindStudio.Strings.DEncrypt">
+            <summary>
+            Encrypt 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:RaywindStudio.Strings.DEncrypt.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:RaywindStudio.Strings.DEncrypt.Encrypt(System.String)">
+            <summary>
+            使用缺省密钥字符串加密string
+            </summary>
+            <param name="original">明文</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:RaywindStudio.Strings.DEncrypt.Decrypt(System.String)">
+            <summary>
+            使用缺省密钥字符串解密string
+            </summary>
+            <param name="original">密文</param>
+            <returns>明文</returns>
+        </member>
+        <member name="M:RaywindStudio.Strings.DEncrypt.Encrypt(System.String,System.String)">
+            <summary>
+            使用给定密钥字符串加密string
+            </summary>
+            <param name="original">原始文字</param>
+            <param name="key">密钥</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:RaywindStudio.Strings.DEncrypt.Decrypt(System.String,System.String)">
+            <summary>
+            使用给定密钥字符串解密string
+            </summary>
+            <param name="original">密文</param>
+            <param name="key">密钥</param>
+            <returns>明文</returns>
+        </member>
+        <member name="M:RaywindStudio.Strings.DEncrypt.Decrypt(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            使用给定密钥字符串解密string,返回指定编码方式明文
+            </summary>
+            <param name="encrypted">密文</param>
+            <param name="key">密钥</param>
+            <param name="encoding">字符编码方案</param>
+            <returns>明文</returns>
+        </member>
+        <member name="M:RaywindStudio.Strings.DEncrypt.Decrypt(System.Byte[])">
+            <summary>
+            使用缺省密钥字符串解密byte[]
+            </summary>
+            <param name="encrypted">密文</param>
+            <returns>明文</returns>
+        </member>
+        <member name="M:RaywindStudio.Strings.DEncrypt.Encrypt(System.Byte[])">
+            <summary>
+            使用缺省密钥字符串加密
+            </summary>
+            <param name="original">原始数据</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:RaywindStudio.Strings.DEncrypt.MakeMD5(System.Byte[])">
+            <summary>
+            生成MD5摘要
+            </summary>
+            <param name="original">数据源</param>
+            <returns>摘要</returns>
+        </member>
+        <member name="M:RaywindStudio.Strings.DEncrypt.Encrypt(System.Byte[],System.Byte[])">
+            <summary>
+            使用给定密钥加密
+            </summary>
+            <param name="original">明文</param>
+            <param name="key">密钥</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:RaywindStudio.Strings.DEncrypt.Decrypt(System.Byte[],System.Byte[])">
+            <summary>
+            使用给定密钥解密数据
+            </summary>
+            <param name="encrypted">密文</param>
+            <param name="key">密钥</param>
+            <returns>明文</returns>
+        </member>
+        <member name="T:RaywindStudio.Strings.GUID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:RaywindStudio.Strings.GUID.getGuid">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:RaywindStudio.Strings.Md5">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:RaywindStudio.Strings.Md5.GetMD5String(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="T:RaywindStudio.RawPrinterHelper.RawPrinterHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:RaywindStudio.RawPrinterHelper.RawPrinterHelper.OpenPrinter(System.String,System.IntPtr@,System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="szPrinter"></param>
+            <param name="hPrinter"></param>
+            <param name="pd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RaywindStudio.RawPrinterHelper.RawPrinterHelper.ClosePrinter(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="hPrinter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RaywindStudio.RawPrinterHelper.RawPrinterHelper.StartDocPrinter(System.IntPtr,System.Int32,RaywindStudio.RawPrinterHelper.RawPrinterHelper.DOCINFOA)">
+            <summary>
+            
+            </summary>
+            <param name="hPrinter"></param>
+            <param name="level"></param>
+            <param name="di"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RaywindStudio.RawPrinterHelper.RawPrinterHelper.EndDocPrinter(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="hPrinter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RaywindStudio.RawPrinterHelper.RawPrinterHelper.StartPagePrinter(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="hPrinter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RaywindStudio.RawPrinterHelper.RawPrinterHelper.EndPagePrinter(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="hPrinter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RaywindStudio.RawPrinterHelper.RawPrinterHelper.WritePrinter(System.IntPtr,System.IntPtr,System.Int32,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="hPrinter"></param>
+            <param name="pBytes"></param>
+            <param name="dwCount"></param>
+            <param name="dwWritten"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RaywindStudio.RawPrinterHelper.RawPrinterHelper.SendBytesToPrinter(System.String,System.IntPtr,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="szPrinterName"></param>
+            <param name="pBytes"></param>
+            <param name="dwCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RaywindStudio.RawPrinterHelper.RawPrinterHelper.SendFileToPrinter(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="szPrinterName"></param>
+            <param name="szFileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RaywindStudio.RawPrinterHelper.RawPrinterHelper.SendStringToPrinter(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="szPrinterName"></param>
+            <param name="szString"></param>
+            <returns></returns>
+        </member>
+        <member name="T:RaywindStudio.RawPrinterHelper.RawPrinterHelper.DOCINFOA">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:RaywindStudio.RawPrinterHelper.RawPrinterHelper.DOCINFOA.pDocName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:RaywindStudio.RawPrinterHelper.RawPrinterHelper.DOCINFOA.pOutputFile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:RaywindStudio.RawPrinterHelper.RawPrinterHelper.DOCINFOA.pDataType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:RaywindStudio.Components.ServerConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:RaywindStudio.Components.ServerConfig.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:RaywindStudio.Components.ServerConfig.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:RaywindStudio.Components.ServerConfig.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:RaywindStudio.Components.ServerConfig.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:RaywindStudio.Strings.Strings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:RaywindStudio.Strings.Strings.strLeft(System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="strSource"></param>
+            <param name="leftLength"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RaywindStudio.Strings.Strings.strRight(System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="strSource"></param>
+            <param name="RightLength"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

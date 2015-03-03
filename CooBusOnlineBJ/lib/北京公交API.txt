@@ -1,0 +1,167 @@
+思路： 1，手工更新路线数据。 2。爱帮openAPI 查具体路线，含坐标。 3，。。。
+
+
+周边公交站点查询
+http://openapi.aibang.com/bus/stats_xy?app_key=f41c8afccc586de03a99c86097e98ccb&city=%E5%8C%97%E4%BA%AC&lng=116.33785&lat=39.99285&dist=500
+
+公交线路查询
+http://openapi.aibang.com/bus/lines?app_key=f41c8afccc586de03a99c86097e98ccb&city=%E5%8C%97%E4%BA%AC&q=42&with_xys=1
+http://openapi.aibang.com/bus/lines?app_key=f41c8afccc586de03a99c86097e98ccb&city=%E5%8C%97%E4%BA%AC&q=42
+
+http://bjgj.aibang.com:8899/bus.php?city=%E5%8C%97%E4%BA%AC&id=337&no=15&type=1&encrypt=0&versionid=1
+http://bjgj.aibang.com:8899/bus.php?city=%E5%8C%97%E4%BA%AC&encrypt=0&id=337&no=48
+
+versionid xml格式 0，1，2
+enctypt 是否加密 1，0
+type. 往返程 1，0
+no 当前站点序号
+city 城市
+id 线路ID 
+
+            foreach ($data as $i => $bus){
+                $sname = str_replace('"', '\"', $bus['nextStation']);
+                $message .= '{'
+                    .'"busid":"'.$bus['busid'].'",'
+                    .'"type":"'.$bus['type'].'",'
+                    .'"nextStation":"'.$sname.'",'
+                    .'"nextStationNo":"'.$bus['nextStationNo'].'",'
+                    .'"nextStationDistince":"'.$bus['nextStationDistince'].'",'
+                    .'"nextStationRunTimes":"'.$bus['nextStationRunTimes'].'",'         
+                    .'"nextStationTime":"'.$bus['nextStationTime'].'",'
+                    .'"stationDistince":"'.$bus['stationDistince'].'",'
+                    .'"stationRunTimes":"'.$bus['stationRunTimes'].'",'
+                    .'"stationTime":"'.$bus['stationTime'].'",'
+                    .'"speed":"'.$bus['speed'].'",'
+                    .'"extraInfo":"'.$bus['extraInfo'].'",'
+                    .'"gpsupdateTime":"'.$bus['gpsupdateTime'].'",'
+                    .'"lon":"'.$bus['lon'].'",'
+                    .'"lat":"'.$bus['lat'].'",'
+                    .'"updateTime":"'.$bus['updateTime'].'"'
+                    .'}';
+
+<?xml version='1.0' encoding='utf-8' ?><root><status>200</status><message>success</message><encrypt>0</encrypt><num>8</num><lid>337</lid><data><bus><gt>1404184189</gt><id>98052</id><t>1</t><ns>柳村</ns><nsn>23</nsn><nsd>-1</nsd><nsrt>-1</nsrt><nst>-1</nst><sd>-1</sd><srt>-1</srt><st>-1</st><x>116.340946</x><y>39.872703</y><ut>1404184195</ut></bus><bus><gt>1404184184</gt><id>98058</id><t>1</t><ns>三路居北</ns><nsn>21</nsn><nsd>94</nsd><nsrt>15</nsrt><nst>1404184199</nst><sd>-1</sd><srt>-1</srt><st>-1</st><x>116.329004</x><y>39.872698</y><ut>1404184187</ut></bus><bus><gt>1404184188</gt><id>98060</id><t>1</t><ns>翠微西里</ns><nsn>6</nsn><nsd>160</nsd><nsrt>11</nsrt><nst>1404184199</nst><sd>6042</sd><srt>1157</srt><st>1404185345</st><x>116.296017</x><y>39.918922</y><ut>1404184187</ut></bus><bus><gt>1404184178</gt><id>98669</id><t>1</t><ns>柳村</ns><nsn>23</nsn><nsd>236</nsd><nsrt>82</nsrt><nst>1404184260</nst><sd>-1</sd><srt>-1</srt><st>-1</st><x>116.339088</x><y>39.873169</y><ut>1404184181</ut></bus><bus><gt>1404184177</gt><id>98042</id><t>1</t><ns>湾子路口南</ns><nsn>16</nsn><nsd>157</nsd><nsrt>32</nsrt><nst>1404184209</nst><sd>-1</sd><srt>-1</srt><st>-1</st><x>116.326367</x><y>39.889741</y><ut>1404184181</ut></bus><bus><gt>1404184167</gt><id>98045</id><t>1</t><ns>菜户营西街</ns><nsn>22</nsn><nsd>-1</nsd><nsrt>-1</nsrt><nst>-1</nst><sd>-1</sd><srt>-1</srt><st>-1</st><x>116.334565</x><y>39.873031</y><ut>1404184177</ut></bus><bus><gt>1404184166</gt><id>98054</id><t>1</t><ns>菜户营西街</ns><nsn>22</nsn><nsd>148</nsd><nsrt>9</nsrt><nst>1404184175</nst><sd>-1</sd><srt>-1</srt><st>-1</st><x>116.332966</x><y>39.873066</y><ut>1404184167</ut></bus><bus><gt>1404184166</gt><id>98056</id><t>1</t><ns>马连道北路</ns><nsn>15</nsn><nsd>-1</nsd><nsrt>-1</nsrt><nst>-1</nst><sd>-1</sd><srt>-1</srt><st>-1</st><x>116.325874</x><y>39.891205</y><ut>1404184167</ut></bus></data></root>
+
+
+{
+  "root": {
+    "status": "200",
+    "message": "success",
+    "city": "北京",
+    "linename": "运通113(来广营北-吴庄)",
+    "busnum": "6",
+    "dataList": {
+      "bus": [
+        {
+          "busid": "8039",
+          "type": "1",
+          "nextStation": "青塔蔚园",
+          "nextStationNo": "47",            // 下一站的编号是47
+          "nextStationDistince": "98",      // 公交车当前位置与下一站的距离是98m
+          "nextStationRunTimes": "15",      // 公交车到达下一站需要跑的时间是15s
+          "nextStationTime": "1387461904",  // 公交车到达下一站的时刻 (unix time : Thu, 19 Dec 2013 14:05:04 GMT)
+          "stationDistince": "-1",          // （计算得出）公交车到达用户所在公交站的距离，如果公交车已过去，那么值为-1
+          "stationRunTimes": "-1",          // （计算得出）公交车到达用户所在公交站所需要的时间，如果公交车已经过去，那么值为-1
+          "stationTime": "-1",              // （计算得出）公交车到达用户所在公交站的时刻，如果公交车已经过去，那么值为-1
+          "speed": "25.2",                  // （计算得出）公交车的及时速度是25.2 km/h
+          "extraInfo": "1",
+          "gpsupdateTime": "1387461889",    // (?) 获取GPS数据的时间 (unix time : Thu, 19 Dec 2013 14:04:49 GMT)
+          "lon": "116.264568",              // 纬度
+          "lat": "39.894046",               // 经度
+          "updateTime": "1387461896"        // (?) 更新时间 (unix time : Thu, 19 Dec 2013 14:04:56 GMT)
+        },
+        {
+          "busid": "8029",
+          "type": "1",
+          "nextStation": "吴家村",
+          "nextStationNo": "51",
+          "nextStationDistince": "562",
+          "nextStationRunTimes": "70",
+          "nextStationTime": "1387461959",
+          "stationDistince": "-1",
+          "stationRunTimes": "-1",
+          "stationTime": "-1",
+          "speed": "28.8",
+          "extraInfo": "1",
+          "gpsupdateTime": "1387461889",
+          "lon": "116.247494",
+          "lat": "39.889641",
+          "updateTime": "1387461889"
+        },
+        {
+          "busid": "8041",
+          "type": "1",
+          "nextStation": "志新桥西",
+          "nextStationNo": "21",
+          "nextStationDistince": "375",
+          "nextStationRunTimes": "67",
+          "nextStationTime": "1387461760",
+          "stationDistince": "9244",
+          "stationRunTimes": "1431",
+          "stationTime": "1387463124",
+          "speed": "21.6",
+          "extraInfo": "1",
+          "gpsupdateTime": "1387461693",
+          "lon": "116.370594",
+          "lat": "39.987619",
+          "updateTime": "1387461889"
+        },
+        {
+          "busid": "8043",
+          "type": "1",
+          "nextStation": "海淀桥西",
+          "nextStationNo": "27",
+          "nextStationDistince": "229",
+          "nextStationRunTimes": "31",
+          "nextStationTime": "1387461916",
+          "stationDistince": "3599",
+          "stationRunTimes": "410",
+          "stationTime": "1387462295",
+          "speed": "25.2",
+          "extraInfo": "1",
+          "gpsupdateTime": "1387461885",
+          "lon": "116.30439",
+          "lat": "39.985367",
+          "updateTime": "1387461890"
+        },
+        {
+          "busid": "8037",
+          "type": "1",
+          "nextStation": "定慧桥北",
+          "nextStationNo": "38",
+          "nextStationDistince": "236",
+          "nextStationRunTimes": "29",
+          "nextStationTime": "1387461910",
+          "stationDistince": "-1",
+          "stationRunTimes": "-1",
+          "stationTime": "-1",
+          "speed": "28.8",
+          "extraInfo": "1",
+          "gpsupdateTime": "1387461881",
+          "lon": "116.274868",
+          "lat": "39.928548",
+          "updateTime": "1387461886"
+        },
+        {
+          "busid": "8042",
+          "type": "1",
+          "nextStation": "吴家村",
+          "nextStationNo": "51",
+          "nextStationDistince": "562",
+          "nextStationRunTimes": "68",
+          "nextStationTime": "1387461947",
+          "stationDistince": "-1",
+          "stationRunTimes": "-1",
+          "stationTime": "-1",
+          "speed": "28.8",
+          "extraInfo": "1",
+          "gpsupdateTime": "1387461879",
+          "lon": "116.247494",
+          "lat": "39.889641",
+          "updateTime": "1387461886"
+        }
+      ]
+    }
+  }
+}
+
+

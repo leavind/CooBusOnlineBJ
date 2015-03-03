@@ -1,0 +1,108 @@
+﻿<phone:PhoneApplicationPage xmlns:Controls="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:RealTimeBusBJ"
+    xmlns:Location="clr-namespace:System.Device.Location;assembly=System.Device" 
+    x:Class="RealTimeBusBJ.MyNearPage"
+    local:TiltEffect.IsTiltEnabled="True"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" Loaded="PhoneApplicationPage_Loaded" Title="北京实时公交" 
+    shell:SystemTray.IsVisible="True"
+    shell:SystemTray.Opacity="0"  
+    >
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" Opacity="0.6">
+            <shell:ApplicationBarIconButton x:Name="abBack" IconUri="/image/appbar/back.png" 
+                                             Text="返回" Click="abBack_Click" />
+            <shell:ApplicationBarIconButton x:Name="abRefresh"  IconUri="/image/appbar/refresh.png" 
+                                             Text="刷新" Click="abRefresh_Click"/>
+            <shell:ApplicationBarIconButton x:Name="about"  IconUri="/image/appbar/question.png" 
+                                             Text="说明" Click="about_Click"/>
+            <!--<shell:ApplicationBar.MenuItems> 
+                <shell:ApplicationBarMenuItem Text="菜单项1" Click="menuItem1_Click"/>
+                <shell:ApplicationBarMenuItem Text="菜单项2" Click="menuItem2_Click"/>
+            </shell:ApplicationBar.MenuItems>-->
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <Grid x:Name="LayoutRoot" Margin="0,-32,0,-72"   Background="{StaticResource appBgImage}">
+        <TextBlock x:Name="pageTitle" Margin="5,33,0,0" Height="32" VerticalAlignment="Top">
+			<Run Text="周边"/>
+        </TextBlock>
+
+        <StackPanel Orientation="Vertical" Margin="0,32,0,0"  local:TiltEffect.SuppressTilt="True">
+            <!--<Controls:Map x:Name="map1" Margin='0,0,0,0' MaxHeight="590" 
+							ScrollViewer.HorizontalScrollBarVisibility="Auto" 
+							ScrollViewer.VerticalScrollBarVisibility="Auto" 
+							Height="600" Width="480" ZoomLevel="15" LandmarksEnabled="True" 
+                                      PedestrianFeaturesEnabled="True" Pitch="56" 
+                                      WatermarkMode="On" CacheMode="BitmapCache" Visibility="Collapsed">
+            </Controls:Map>-->
+            <!--枢轴控件-->
+            <phone:Pivot x:Name='pt1' Margin="0,32,0,0" 
+				VerticalAlignment="Top" FontSize="22">
+                <!--枢轴项一-->
+                <phone:PivotItem x:Name="pv1" Margin="12,15,12,0" >
+                    <phone:PivotItem.Header>
+                        <TextBlock x:Name="pv1Header" Margin='0,0,0,0'   Text='公交站台   '
+							TextWrapping='Wrap' TextAlignment="Left" FontSize="40" />
+                    </phone:PivotItem.Header>
+                    <StackPanel Margin='0,10,0,0' local:TiltEffect.SuppressTilt="True">
+                        <TextBlock x:Name='tb_LocName'  Height="50" FontSize="30" />
+                        <TextBlock x:Name='tb_LocAddr'  Height="40" FontSize="24" 
+							Foreground="{StaticResource contentColor}"
+							local:TiltEffect.SuppressTilt="True"/>
+
+                        <phone:LongListSelector x:Name='list1'  Width='480'  
+							Padding='0,0,0,0'  MaxHeight="500" Tap="list1_Tap"
+							ScrollViewer.HorizontalScrollBarVisibility="Visible" 
+							ScrollViewer.VerticalScrollBarVisibility="Visible" >
+                            <phone:LongListSelector.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Margin='0,5,0,10' >
+                                        <TextBlock Margin='0,0,0,0' Text='{Binding name}' TextWrapping='Wrap' 
+											FontSize="36"  Foreground="{StaticResource titleColor}" />
+                                        <TextBlock Text='{Binding address}' TextWrapping='Wrap'  
+											Foreground="{StaticResource contentColor}" 
+											FontSize="26"    />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </phone:LongListSelector.ItemTemplate>
+                        </phone:LongListSelector>
+                    </StackPanel>
+                </phone:PivotItem>
+
+                <!--枢轴项二-->
+                <phone:PivotItem x:Name="pv2" Margin="0,15,0,0" >
+                    <phone:PivotItem.Header>
+                        <TextBlock x:Name="pv2Header" Margin='0,0,0,0' Text='的士在线 ' 
+							TextWrapping='NoWrap' TextAlignment="Left" FontSize="40"  />
+                    </phone:PivotItem.Header>
+                    <StackPanel Margin='0,0,0,0' local:TiltEffect.SuppressTilt="True">
+                        <Controls:Map x:Name="map2" Margin='0,0,0,0' MaxHeight="600" 
+							ScrollViewer.HorizontalScrollBarVisibility="Auto" 
+							ScrollViewer.VerticalScrollBarVisibility="Auto" 
+							Height="600" Width="480" ZoomLevel="16" Pitch="56" CacheMode="BitmapCache" FontSize="20" FontWeight="Bold" Loaded="map2_Loaded" 
+                                      >
+                            <Controls:Map.Center>
+                                <Location:GeoCoordinate Altitude="NaN" Course="NaN" 
+                                                        HorizontalAccuracy="NaN" 
+                                                        Longitude="114.4"
+                                                        Latitude="22.2" 
+                                                        Speed="NaN" 
+                                                        VerticalAccuracy="NaN"/>                                
+                            </Controls:Map.Center>
+                        </Controls:Map>
+                    </StackPanel>
+                </phone:PivotItem>
+            </phone:Pivot>
+        </StackPanel>
+    </Grid>
+</phone:PhoneApplicationPage>

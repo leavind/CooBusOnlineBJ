@@ -1,0 +1,154 @@
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\AppManifest.xaml
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\Properties\WMAppManifest.xml
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\Microsoft.Phone.Controls.Toolkit.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\Newtonsoft.Json.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\RestSharp.WindowsPhone.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\Newtonsoft.Json.xml
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\RestSharp.WindowsPhone.xml
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\ar-SA\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\az-Latn-AZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\be-BY\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\bg-BG\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\ca-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\cs-CZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\da-DK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\de-DE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\el-GR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\en-GB\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\es-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\es-MX\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\et-EE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\fa-IR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\fi-FI\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\fil-PH\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\fr-CA\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\he-IL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\hi-IN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\hr-HR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\hu-HU\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\id-ID\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\it-IT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\ja-JP\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\kk-KZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\ko-KR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\lt-LT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\lv-LV\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\mk-MK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\ms-MY\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\nb-NO\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\nl-NL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\pl-PL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\pt-BR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\pt-PT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\ro-RO\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\ru-RU\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\sk-SK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\sl-SI\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\sq-AL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\sr-Latn-CS\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\th-TH\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\tr-TR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\uk-UA\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\uz-Latn-UZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\obj\Release\App.g.cs
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\obj\Release\page\Favorite.g.cs
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\obj\Release\page\Config.g.cs
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\obj\Release\page\RoutePlan.g.cs
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\obj\Release\page\MainPage.g.cs
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\obj\Release\page\BusRun.g.cs
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\obj\Release\page\InputLine.g.cs
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\obj\Release\page\SeleLineList.g.cs
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\obj\Release\page\MyNearPage.g.cs
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\obj\Release\XapCacheFile.xml
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\obj\Release\RealTimeBusBJ.g.resources
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\RealTimeBusBJ.dll.config
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\RealTimeBusBJ.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\RealTimeBusBJ.pdb
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\Bin\Release\RealTimeBusBJ.xap
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\obj\Release\RealTimeBusBJ.dll
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\obj\Release\RealTimeBusBJ.pdb
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\obj\Release\page\MetroMap.g.cs
+C:\Users\lei\Desktop\CooBusOnline\CooBusOnlineBJ\obj\Release\CooBusOnlineBJ.csprojResolveAssemblyReference.cache
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\obj\Release\App.g.cs
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\obj\Release\page\Favorite.g.cs
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\obj\Release\page\Config.g.cs
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\obj\Release\page\RoutePlan.g.cs
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\obj\Release\page\MainPage.g.cs
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\obj\Release\page\MetroMap.g.cs
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\obj\Release\page\InputLine.g.cs
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\obj\Release\page\SeleLineList.g.cs
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\obj\Release\page\MyNearPage.g.cs
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\obj\Release\RealTimeBusBJ.g.resources
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\obj\Release\RealTimeBusBJ.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\RealTimeBusBJ.dll.config
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\RealTimeBusBJ.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\RealTimeBusBJ.pdb
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\AppManifest.xaml
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\Properties\WMAppManifest.xml
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\RealTimeBusBJ.xap
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\Microsoft.Phone.Controls.Toolkit.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\Newtonsoft.Json.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\RestSharp.WindowsPhone.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\Newtonsoft.Json.xml
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\RestSharp.WindowsPhone.xml
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\ar-SA\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\az-Latn-AZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\be-BY\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\bg-BG\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\ca-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\cs-CZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\da-DK\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\de-DE\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\el-GR\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\en-GB\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\es-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\es-MX\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\et-EE\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\fa-IR\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\fi-FI\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\fil-PH\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\fr-CA\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\he-IL\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\hi-IN\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\hr-HR\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\hu-HU\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\id-ID\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\it-IT\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\ja-JP\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\kk-KZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\ko-KR\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\lt-LT\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\lv-LV\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\mk-MK\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\ms-MY\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\nb-NO\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\nl-NL\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\pl-PL\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\pt-BR\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\pt-PT\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\ro-RO\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\ru-RU\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\sk-SK\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\sl-SI\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\sq-AL\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\sr-Latn-CS\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\th-TH\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\tr-TR\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\uk-UA\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\uz-Latn-UZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\obj\Release\RealTimeBusBJ.pdb
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\obj\Release\XapCacheFile.xml
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\obj\Release\page\BusRunAiBang.g.cs
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\obj\Release\page\BusRun.g.cs
+d:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\Bin\Release\SharpGIS.GZipWebClient.dll
+D:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\CooBusOnlineBJ\obj\Release\CooBusOnlineBJ.csprojResolveAssemblyReference.cache

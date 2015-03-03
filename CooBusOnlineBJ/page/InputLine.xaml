@@ -1,0 +1,68 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="RealTimeBusBJ.InputLine"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:RealTimeBusBJ"
+    local:TiltEffect.IsTiltEnabled="True"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" Loaded="PhoneApplicationPage_Loaded" Title="北京实时公交" 
+    shell:SystemTray.IsVisible="True"
+    shell:SystemTray.Opacity="0"  
+    >
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <Grid x:Name="LayoutRoot" Margin="0,-32,0,0" Background="{StaticResource appBgImage}">
+        <TextBlock x:Name="pageTitle" Margin="5,33,0,0" Height="27" VerticalAlignment="Top">
+            公交在线</TextBlock>
+        
+        <TextBox x:Name="tb1" Height="80" TextWrapping="Wrap" VerticalAlignment="Top" 
+        			Text="请输入公交路线"  GotFocus="tb1_GotFocus" 
+                 LostFocus="tb1_LostFocus"    InputScope="Number" 
+                 FontSize="32" Margin="0,63,0,0" TextAlignment="Center" Foreground="Green" 
+                 Opacity="0.7" TextChanged="tb1_TextChanged" />
+        <phone:LongListSelector x:Name='list1'  Width='480'  Margin="0,130,0,0"  
+        		Padding='0,10,0,0'  MaxHeight="610" VerticalAlignment="Top"
+                 ScrollViewer.HorizontalScrollBarVisibility="Visible" 
+                 ScrollViewer.VerticalScrollBarVisibility="Visible" Tap="list1_Tap">
+                <phone:LongListSelector.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin='10,20,10,0'  >
+                            <TextBlock Margin='0,20,0,0' Text='{Binding title}' 
+                                       TextWrapping='Wrap' 
+        						FontSize="26" Foreground="{StaticResource titleColor}"  />
+                            <TextBlock Text='{Binding detail}' TextWrapping='Wrap' 
+                                       Foreground="{StaticResource contentColor}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </phone:LongListSelector.ItemTemplate>
+            </phone:LongListSelector>
+    </Grid>
+    
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar x:Name="ab3b" IsVisible="True" IsMenuEnabled="True" Opacity="1">
+            <shell:ApplicationBarIconButton x:Name="abBack" IconUri="/image/appbar/back.png" 
+                                             Text="返回" Click="abBack_Click" />
+
+            <shell:ApplicationBarIconButton x:Name="abQuery" IconUri="/image/appbar/Search.png" 
+                                             Text="查询" Click="abQuery_Click" />
+
+            <shell:ApplicationBarIconButton x:Name="abInput"  IconUri="/image/appbar/Keyboard.png" 
+                                             Text="123" Click="abInput_Click" />
+
+            <shell:ApplicationBarIconButton x:Name="abRecord"  IconUri="/image/appbar/record.png" 
+                                             Text="历史路线" Click="abRecord_Click" />
+
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem x:Name="ab2" Text="更新离线数据包" Click="ab2_Click" />
+                <shell:ApplicationBarMenuItem x:Name="ab3" Text="查看数据包详情" Click="ab3_Click" />
+                <shell:ApplicationBarMenuItem x:Name="ab4" Text="使用说明" Click="ab4_Click" />
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>

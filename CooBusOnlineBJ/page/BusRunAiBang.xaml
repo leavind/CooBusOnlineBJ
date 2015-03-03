@@ -1,0 +1,132 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="RealTimeBusBJ.BusRunAiBang"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:local="clr-namespace:RealTimeBusBJ"
+    local:TiltEffect.IsTiltEnabled="True"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" Loaded="PhoneApplicationPage_Loaded" Title="北京实时公交" 
+    shell:SystemTray.IsVisible="True"
+    shell:SystemTray.Opacity="0" 
+    >
+
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <Grid x:Name="LayoutRoot" Margin="0,-32,0,-72"  Background="{StaticResource appBgImage}">
+
+        <TextBlock x:Name="pageTitle" Margin="5,33,0,0" Height="32" VerticalAlignment="Top">
+            北京公交</TextBlock>
+        <StackPanel Orientation="Vertical" Margin="0,32,0,0"  
+                    local:TiltEffect.SuppressTilt="True">
+            <StackPanel Margin='0,42,0,0' local:TiltEffect.SuppressTilt="True" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="44"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25*" />
+                        <ColumnDefinition Width="50*"/>
+                        <ColumnDefinition Width="25*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock x:Name="tb1" Margin='0,0,0,0' Grid.Row="0" Grid.Column="0" 
+                        TextWrapping='NoWrap'     Foreground="{StaticResource titleColor}"                                           
+                       TextAlignment="Center" FontSize="34" Grid.ColumnSpan="3" local:TiltEffect.SuppressTilt="True" />
+                    <TextBlock Name="tb2"  Margin='0,0,0,0' Grid.Row="1" Grid.Column="0" 
+                        TextWrapping='NoWrap'  Text=""   local:TiltEffect.SuppressTilt="True"                                        
+                       TextAlignment="Center" FontSize="22"  />
+                    <TextBlock x:Name="tb3" Margin='0,0,0,0' Grid.Row="1" Grid.Column="1" 
+                        TextWrapping='NoWrap' Foreground="{StaticResource titleColor}"                                           
+                       TextAlignment="Left" FontSize="22" local:TiltEffect.SuppressTilt="True" />
+                </Grid>
+            </StackPanel>
+            <phone:LongListSelector x:Name='list1'  
+        		       Tap="list1_Tap" ItemRealized="list_ItemRealized"
+                        Height="560" CacheMode="BitmapCache" Margin="0,20,0,0">
+                <phone:LongListSelector.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin='0,0,0,0' >
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="64*" />
+                                    <ColumnDefinition Width="2.2*"/>
+                                    <ColumnDefinition Width="33.8*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock x:Name="tttTextBlock1" Margin='0,0,0,0' Grid.Row="0" Grid.Column="0" 
+                                                   Foreground="{StaticResource titleColor}"
+                                           Text='{Binding title}' TextWrapping='Wrap'
+                                                   TextAlignment="Right" FontSize="26" />
+                                <StackPanel Grid.Row="0"  Margin="-5,0,-5,0" Grid.RowSpan="2" Grid.Column="1"  Width="10">
+                                    <Ellipse x:Name="eeeEllipse1" Width="14" Height="16" Margin="-5,12,-5,0" Stroke="{StaticResource titleColor}"  
+                                                    Canvas.ZIndex="9999" StrokeThickness="7" />
+                                    <Rectangle Margin="0,-40,0,-40" Width="2" 
+                                                  Canvas.ZIndex="8888" Height="80" Fill="{StaticResource PhoneForegroundBrush}" />
+                                </StackPanel>
+                                <StackPanel  Grid.Row="0" Grid.Column="2" Orientation="Horizontal" >
+                                    <Image Margin='1,0,0,0' Source="{Binding StopImg.Fir}"  HorizontalAlignment="Left" />
+                                    <Image Margin='1,0,0,0' Source="{Binding StopImg.Sec}"  HorizontalAlignment="Left" />
+                                    <Image Margin='1,0,0,0' Source="{Binding StopImg.Thi}"  HorizontalAlignment="Left" />
+                                    <Image Margin='1,0,0,0' Source="{Binding StopImg.Fou}"  HorizontalAlignment="Left" />
+                                    <Image Margin='1,0,0,0' Source="{Binding StopImg.Fif}"  HorizontalAlignment="Left" />
+                                </StackPanel>
+                                <StackPanel  Grid.Row="1" Grid.Column="2" Orientation="Horizontal" >
+                                    <Image Margin='1,0,0,0' Source="{Binding RunImg.Fir}"  HorizontalAlignment="Left" />
+                                    <Image Margin='1,0,0,0' Source="{Binding RunImg.Sec}"  HorizontalAlignment="Left" />
+                                    <Image Margin='1,0,0,0' Source="{Binding RunImg.Thi}"  HorizontalAlignment="Left" />
+                                    <Image Margin='1,0,0,0' Source="{Binding RunImg.Fou}"  HorizontalAlignment="Left" />
+                                    <Image Margin='1,0,0,0' Source="{Binding RunImg.Fif}"  HorizontalAlignment="Left" />
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+                    </DataTemplate>
+                </phone:LongListSelector.ItemTemplate>
+            </phone:LongListSelector>
+        </StackPanel>
+
+        <StackPanel x:Name="spTop" Margin="0,170,5,150"  local:TiltEffect.SuppressTilt="True"
+                    HorizontalAlignment="Right" Canvas.ZIndex="9999" >
+            <ScrollViewer  Margin="0,0,0,0" 
+                       VerticalContentAlignment="Top"
+                       VerticalScrollBarVisibility="Auto"
+                       HorizontalScrollBarVisibility="Auto"
+                       >
+                <TextBlock  Margin="0,0,0,0" x:Name="tbTop" TextWrapping="Wrap" Canvas.ZIndex="9999"
+                        HorizontalAlignment="Right" TextAlignment="Right" FontSize="17" 
+                          MaxHeight="500"  local:TiltEffect.SuppressTilt="True">
+                </TextBlock>
+            </ScrollViewer>
+        </StackPanel>
+
+    </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" Opacity="0.6">
+
+            <shell:ApplicationBarIconButton x:Name="abBack" IconUri="/image/appbar/back.png" 
+                                             Text="返回" Click="abBack_Click"/>
+            <shell:ApplicationBarIconButton x:Name="abRefresh"  IconUri="/image/appbar/refresh.png" 
+                                             Text="刷新" Click="abRefresh_Click" />
+            <shell:ApplicationBarIconButton x:Name="abHuancheng" IconUri="/image/appbar/huancheng.png" 
+                                            Text="返程" Click="abHuancheng_Click" IsEnabled="False"/>
+            <shell:ApplicationBarIconButton x:Name="abPin" IconUri="/image/appbar/Pin.png" 
+                                            Text="钉到桌面" Click="abPin_Click" />
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="站台位置说明" Click="ApplicationBarMenuItem_Click" />
+                <shell:ApplicationBarMenuItem Text="显示/隐藏车辆详情" Click="ApplicationBarMenuItem60_Click" />
+                <shell:ApplicationBarMenuItem Text="每10秒自动刷新车辆" Click="ApplicationBarMenuItem10_Click" />
+                <shell:ApplicationBarMenuItem Text="取消振动提醒" Click="ApplicationBarMenuItem11_Click" />
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>

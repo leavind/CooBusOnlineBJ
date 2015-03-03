@@ -1,0 +1,50 @@
+1,2735531 深圳实时公交 
+	W6Y7nrTSCyzM3qwPyoXI7x6i 			浏览器端  
+	7701bc16573aaed6bffcfa28f65ae066 		服务器端
+	GPS: 		 22.6504767592231,114.009046539295
+	Baidu:		 22.650476737194,114.00904652728
+	百度深圳市龙华新区龙胜村委   22.658217896888,114.02242229632
+
+2,Place API v2.0     周边
+	http://api.map.baidu.com/place/v2/search?&q=饭店&region=北京&output=json&ak=E4805d16520de693a3fe707cdc962045
+	http://api.map.baidu.com/place/v2/search?&query=公交&location=22.6504767592231,114.009046539295&radius=2000&output=json&ak=W6Y7nrTSCyzM3qwPyoXI7x6i
+	http://api.map.baidu.com/place/v2/search   //v2 place区域检索POI服务
+	http://api.map.baidu.com/place/v2/detail   //v2 POI详情服务
+	http://api.map.baidu.com/place/v2/eventsearch   //v2 团购信息检索服务
+	http://api.map.baidu.com/place/v2/eventdetail  //v2 商家团购信息查询
+	http://api.map.baidu.com/place/v2/search?&query=公交&location=22.658217896888,114.02242229632&radius=2000&output=json&ak=W6Y7nrTSCyzM3qwPyoXI7x6i
+
+
+3,Place suggestion API v1.0   模糊猜测
+	http://api.map.baidu.com/place/v2/suggestion?query=%E5%A4%A9%E5%AE%89%E9%97%A8&region=131%20&output=json&ak=E4805d16520de693a3fe707cdc962045
+	http://api.map.baidu.com/place/v2/suggestion?query=keyword&region=340&output=json&ak=W6Y7nrTSCyzM3qwPyoXI7x6i
+		//返回一组包含"天安门"字段的建议词条列表
+
+
+4,Geocoding API v2.0    经纬度 地名 互转
+	http://api.map.baidu.com/geocoder/v2/?address=龙胜村&output=json&ak=7701bc16573aaed6bffcfa28f65ae066&callback=showLocation
+	http://api.map.baidu.com/geocoder/v2/?ak=W6Y7nrTSCyzM3qwPyoXI7x6i&location=22.6504767592231,114.009046539295&output=json&pois=1
+	
+
+5,Direction API v1.0   线路规划
+	http://api.map.baidu.com/direction/v1?mode=transit&origin=龙华国税&destination=龙华汽车站&region=340&output=json&ak=W6Y7nrTSCyzM3qwPyoXI7x6i
+	mode 导航模式，包括：driving（驾车）、walking（步行）、transit（公交）
+
+
+6,Route Matrix API v1.0	返回多个起点和多个终点间的线路距离和行驶时间
+	http://api.map.baidu.com/direction/v1/routematrix?output=json&origins=%E5%A4%A9%E5%AE%89%E9%97%A8|%E9%B8%9F%E5%B7%A2&destinations=%E5%8C%97%E4%BA%AC%E9%82%AE%E7%94%B5%E5%A4%A7%E5%AD%A6|%E4%B8%8A%E6%B5%B7%E5%8D%97%E4%BA%AC%E8%B7%AF&ak=E4805d16520de693a3fe707cdc962045
+
+
+7,IP定位 API v1.1  根据IP返回对应位置信息
+	http://api.map.baidu.com/location/ip?ak=E4805d16520de693a3fe707cdc962045&ip=202.198.16.3&coor=bd09ll
+
+
+8,坐标转换API  转换成百度地图坐标
+	http://api.map.baidu.com/geoconv/v1/?coords=114.21892734521,29.575429778924;114.21892734521,29.575429778924&from=1&to=1&ak=你的密钥
+	
+	http://api.map.baidu.com/geoconv/v1/?coords=114.009046539295,22.6504767592231,&from=1&to=5&ak=W6Y7nrTSCyzM3qwPyoXI7x6i
+
+
+A： 1,取得手机GPS坐标，  2，附近的公交站台，  3，选站台，  4，经过此站台的线路，   5，选线路。 6，实况。
+B： 1，出发地点。目的地  2，规划路线（根据附近线路的公交位置，时速。距离）
+C： 深圳地铁图

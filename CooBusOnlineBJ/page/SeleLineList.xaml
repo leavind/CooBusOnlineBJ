@@ -1,0 +1,56 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="RealTimeBusBJ.seleLineList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:RealTimeBusBJ"
+    local:TiltEffect.IsTiltEnabled="True"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" Loaded="PhoneApplicationPage_Loaded" Title="北京实时公交" 
+    shell:SystemTray.IsVisible="True"
+    shell:SystemTray.Opacity="0"  
+    >
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <Grid x:Name="LayoutRoot" Margin="0,-32,0,-72"   Background="{StaticResource appBgImage}">
+        <TextBlock x:Name="pageTitle" Margin="5,33,0,0" Height="32" VerticalAlignment="Top">
+        站台公交路线</TextBlock>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Top"  Margin="0,64,0,0" local:TiltEffect.SuppressTilt="True" >
+                <TextBlock x:Name='tb_LocName'  Height="50" FontSize="36"
+                           Margin="0,5,0,0"  TextAlignment="Center" />
+            <phone:LongListSelector x:Name='list1'  Width='480'  
+        		Padding='0,10,0,0'  Height="640" 
+                 ScrollViewer.HorizontalScrollBarVisibility="Visible" 
+                 ScrollViewer.VerticalScrollBarVisibility="Visible" Tap="list1_Tap">
+                <phone:LongListSelector.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin='20,0,0,20' >
+                            <TextBlock Margin='0,10,0,0' Text='{Binding title}' TextWrapping='Wrap' 
+        						FontSize="26"  Foreground="{StaticResource titleColor}" />
+                            <TextBlock Text='{Binding detail}' TextWrapping='Wrap' 
+                                       Foreground="{StaticResource contentColor}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </phone:LongListSelector.ItemTemplate>
+            </phone:LongListSelector>
+        </StackPanel>
+    </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" Opacity="0.6">
+            <shell:ApplicationBarIconButton x:Name="abBack" IconUri="/image/appbar/back.png" 
+                                             Text="返回" Click="abBack_Click" />
+            <shell:ApplicationBarIconButton x:Name="abRefresh"  IconUri="/image/appbar/refresh.png" 
+                                             Text="刷新" Click="abRefresh_Click" />
+       
+            <!--<shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="菜单项1" Click="menuItem1_Click"/>
+                <shell:ApplicationBarMenuItem Text="菜单项2" Click="menuItem2_Click"/>
+            </shell:ApplicationBar.MenuItems>-->
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>
