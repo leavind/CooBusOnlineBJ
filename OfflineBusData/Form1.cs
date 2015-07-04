@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SQLite;
@@ -11,7 +7,6 @@ using System.IO;
 using RestSharp;
 using System.Web;
 using Newtonsoft.Json;
-using System.Net;
 using System.Text.RegularExpressions;
 //using System.Data.SqlClient;
 
@@ -46,7 +41,7 @@ namespace OfflineBusData
                 //{
                 //    dgr.Cells["Stations"].Value = GetNumber(dgr.Cells["Line_Name"].Value.ToString());
                 //}
-                this.Text += "   ---现有数据" + dataGridView1.RowCount.ToString() + "条---";
+                this.Text = "爱帮公交数据采集   ---现有数据" + dataGridView1.RowCount.ToString() + "条---";
             }
             //SqlConnection sc = new SqlConnection("Data Source=.;Initial Catalog=busOffLine;Persist Security Info=True;User ID=sa;Password=barcode;Connect Timeout=5");
             //dt= RaywindStudio.DAL.DAL.GetDataTable("select * from offline_data", sc);
@@ -216,9 +211,48 @@ namespace OfflineBusData
             {
                 DataTable dtt = dt.Clone();
                 dtt.Clear();
-                dt.Select("Line_Name like '%" + textBox1.Text.Trim() + "%'").CopyToDataTable(dtt, LoadOption.OverwriteChanges);
+                dt.Select("Line_Name like '%" + textBox1.Text.Trim() + "%'").CopyToDataTable(dtt, LoadOption.OverwriteChanges);   
                 //dt = dtt.Copy();
                 dataGridView1.DataSource = dtt;
+                this.Text = "爱帮公交数据采集   ---现有数据" + dataGridView1.RowCount.ToString() + "条---";
+                return;
+            }
+
+            if (tbFile.Text.Trim().Length > 0 && File.Exists(Application.StartupPath+"\\"+tbFile.Text))
+            {
+                //dt = DAL.GetDataTable(
+                //    "SELECT [line_id] as ID ,[line_name] as Line_Name,'' as Stations,''"
+                //    + " as Info FROM [offline_data] where [state]=0 order by [line_id]", connnect);
+
+                DataTable dtt = dt.Clone();
+                dtt.Clear();
+                if (radioButton3.Checked)
+                {
+                    dtt = dt.Copy();
+                }
+                else
+                {
+                    string textTmp = File.ReadAllText(Application.StartupPath + "\\" + tbFile.Text, Encoding.UTF8);
+                    if (radioButton1.Checked)
+                    {
+                        foreach (DataRow dr in dt.Rows)
+                        {
+                            if (textTmp.Contains(dr["ID"].ToString().Trim() + "ÿ"))
+                                dtt.Rows.Add(dr["ID"], dr["Line_Name"], dr["Stations"], dr["Info"]);
+                        }
+                    }
+                    else if (radioButton2.Checked)
+                    {
+                        foreach (DataRow dr in dt.Rows)
+                        {
+                            if (!textTmp.Contains(dr["ID"].ToString().Trim() + "ÿ"))
+                                dtt.Rows.Add(dr["ID"], dr["Line_Name"], dr["Stations"], dr["Info"]);
+                        }
+                    }
+                }
+                dataGridView1.DataSource = dtt;
+                this.Text = "爱帮公交数据采集   ---现有数据" + dataGridView1.RowCount.ToString() + "条---";
+                return;
             }
         }
 
@@ -236,6 +270,33 @@ namespace OfflineBusData
                 System.Diagnostics.Process.Start(
                 "http://bjgj.aibang.com:8899/bus.php?city=%E5%8C%97%E4%BA%AC&no=1&encrypt=0&id="
                 + dataGridView1.CurrentRow.Cells["ID"].Value.ToString());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (tbRec.Text.Trim().Length > 0 && File.Exists(Application.StartupPath + "\\" + tbRec.Text))
+            {
+                //dt = DAL.GetDataTable(
+                //    "SELECT [line_id] as ID ,[line_name] as Line_Name,'' as Stations,''"
+                //    + " as Info FROM [offline_data] where [state]=0 order by [line_id]", connnect);
+
+                DataTable dtt = dt.Clone(); 
+                dtt.Clear();
+                string textTmp = File.ReadAllText(Application.StartupPath + "\\" + tbRec.Text, Encoding.UTF8);
+                StreamReader sr = new StreamReader(Application.StartupPath + "\\" + tbRec.Text, Encoding.UTF8);
+                while (sr.Peek() > 0)
+                {
+                    string temp = sr.ReadLine();
+                    if(temp.Contains("ÿ"))
+                    {
+                        string[] tmps=temp.Split('ÿ');
+                        dtt.Rows.Add(tmps[0], tmps[1], tmps.Length > 2 ? tmps[2] : "", tmps.Length > 3 ? tmps[3] : "");
+                    }                    
+                }
+                dataGridView1.DataSource = dtt;
+                this.Text = "爱帮公交数据采集   ---现有数据" + dataGridView1.RowCount.ToString() + "条---";
+                return;
+            }
         }
     }
 }

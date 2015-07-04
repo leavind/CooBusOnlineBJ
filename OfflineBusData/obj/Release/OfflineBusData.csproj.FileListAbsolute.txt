@@ -13,4 +13,3 @@ D:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\OfflineBusData\bin\Relea
 D:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\OfflineBusData\bin\Release\RaywindStudioDLL.dll
 D:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\OfflineBusData\bin\Release\RaywindStudioDLL.pdb
 D:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\OfflineBusData\bin\Release\RaywindStudioDLL.xml
-D:\Documents\Visual Studio 2013\Projects\CooBusOnlineBJ\OfflineBusData\obj\Release\OfflineBusData.csprojResolveAssemblyReference.cache
